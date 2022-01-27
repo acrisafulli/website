@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sharpen your pencil</title>
+<style>
+</style>
+</head>
+<body>
+  <p> How long a line can you draw with the typical pencil?</p>
+  <p>
+  <img src="http://www.starbuzzcoffee.com/images/corporate/ceo.jpg">
+  </p>
+<footer style="text-align: center;">
+<a
+  href="http://validator.w3.org/check?uri=https://acrisafulli.github.io/website/headfirst/sharpenyourpencil.html">
+  <strong> HTML </strong> Valid! </a>
+  <a
+    href="http://jigsaw.w3.org/css-validator/validator?uri=https://acrisafulli.github.io/website/headfirst/sharpenyourpencil.html?profile=css3">
+  <strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
