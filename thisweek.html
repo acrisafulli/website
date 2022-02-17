@@ -14,6 +14,10 @@ footer>a, footer>a:visited {
 body {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }
+.simple-highlight{
+ background-color:white;
+ padding:0.1em 0.2em;
+}
 </style>
 <script>
 function init() {
@@ -28,16 +32,16 @@ window.onload = init;
 </script>
 </head>
 <body>
-<h1>What I did this week.</h1>
-<pre> I updated my min page
+  <h1><span class="simple-highlight">What I did this week.</span></h1>
+<pre>I updated my min page
 I created this page and linked it to my homepage
 I created lounge.css
 I linked lounge.css to Lounge/index.html
 </pre>
-<footer>
+<footer><span class="simple-highlight">
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
-</footer>
+  </span></footer>
 </body>
 </html>
 
