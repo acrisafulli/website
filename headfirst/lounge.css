@@ -14,9 +14,22 @@ h1 {
 h2 { 
   font-size: 130%;
 }
-.guarantee {
+ #guarantee {
+line-height: 1.9em;
+font-style: italic;
+font-family: georgia, "Times New Roman", Times, serif;
+color: #444444;
 border-color: black;
 border-width: 1px;
 border-style: solid;
 background-color: #a7cece;
+padding: 25px;
+padding-left: 80px;
+margin: 30px;
+margin-reight: 250px;
+background-image: url(https://stickershop.line-scdn.net/sticonshop/v1/product/5e9c2396c462927cee6e4d10/iPhone/main.png);
+background-repeat: no-repeat;
+background-position: top left;
+border-style: dashed;
+border-color; white;
 }
