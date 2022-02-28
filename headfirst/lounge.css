@@ -33,3 +33,18 @@ background-position: top left;
 border-style: dashed;
 border-color; white;
 }
+#elixirs {
+border-width: thin;
+border-style: solid;
+border-color: #007e7e;
+width: 200px;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+margin-left: 20px;
+text-align: center;
+background-image
+url(https://media.istockphoto.com/vectors/cocktail-glasses-seamless-vector-pattern-monochrome-design-black-in-vector-id1098042130);
+background-repeat: repeat-x;
+
+}
