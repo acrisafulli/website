@@ -14,7 +14,35 @@ h1 {
     text-align: center;
     color: #F495C3;
 } 
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 90px;
+  text-align: center;:w
+    
 
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 hr  {
     border: 0;
     height: 2px;
@@ -38,10 +66,16 @@ a, a:visited {
 }
 footer {    text-align: center;
 }
-</style
+</style>
 </head>
 <body>
-  <h1><b>Contact Us!</b></h1>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter">Contacts</h3>
+    </div>
+  </div>
+</div>
   <hr>
   <h2>Our customer service email:</h2>
   <h3>example@gmail.com</h2>
