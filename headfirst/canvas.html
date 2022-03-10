@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Canvas Experiment Number 1</title>
+<style>
+h1, footer {
+    text-align: center;
+}
+canvas {
+    @import "compass/css3";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  
+    &:hover {
+   span {
+      display: none; 
+    }
+  }
+}
+
+canvas {
+ cursor: crosshair;
+  
+}
+
+span {
+    font-family: 'Georgia', cursive;
+  font-size: 40px;
+ position: fixed; 
+  top: 50%;
+  left: 50%;
+  color: #000;
+  margin-top: -40px;
+  margin-left: -200px;
+}
+}
+footer {
+    margin-top: 30px;
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+</style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+
+  drawSomething();
+}
+function drawSomething() {
+  const canvas = document.getElementById("myCanvas");
+  const context = canvas.getContext("2d");
+
+  context.fillRect(10, 10, 100, 100);
+}
+window.onload = init;
+  var position = {x: 0, y: window.innerHeight/2};
+var counter = 0;
+var minFontSize = 3;
+var angleDistortion = 0;
+var letters = "According to all known laws of aviation, there is no way a bee should be able to fly.Its wings are too small to get its fat little body off the ground.The bee, of course, flies anyway because bees don't care what humans think is impossible.Yellow, black. Yellow, black. Yellow, black. Yellow, black.Ooh, black and yellow!Let's shake it up a little.Barry! Breakfast is ready!Coming!Hang on a second.Hello?Barry?Adam?Can you believe thi is happening?I can't. I'll pick you up.Looking sharp.Use the stairs, Your father paid good money for those.Sorry. I'm excited.Here's the graduate.";
+
+// Drawing variables
+var canvas;
+var context;
+var mouse = {x: 0, y: 0, down: false}
+
+function init() {
+  canvas = document.getElementById( 'canvas' );
+  context = canvas.getContext( '2d' );
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  canvas.addEventListener('mousemove', mouseMove, false);
+  canvas.addEventListener('mousedown', mouseDown, false);
+  canvas.addEventListener('mouseup',   mouseUp,   false);
+  canvas.addEventListener('mouseout',  mouseUp,  false);
+  canvas.addEventListener('dblclick', doubleClick, false);
+
+  window.onresize = function(event) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+}
+
+function mouseMove ( event ){
+  mouse.x = event.pageX;
+  mouse.y = event.pageY;
+  draw();
+}
+
+function draw() {
+ if ( mouse.down ) {
+    var d = distance( position, mouse );
+    var fontSize = minFontSize + d/2;
+    var letter = letters[counter];
+    var stepSize = textWidth( letter, fontSize );
+
+    if (d > stepSize) {
+      var angle = Math.atan2(mouse.y-position.y, mouse.x-position.x);
+
+      context.font = fontSize + "px Georgia";
+
+      context.save();
+      context.translate( position.x, position.y);
+      context.rotate( angle );
+      context.fillText(letter,0,0);
+      context.restore();
+
+      counter++;
+      if (counter > letters.length-1) {
+        counter = 0;
+      }
+
+    //console.log (position.x + Math.cos( angle ) * stepSize)
+      position.x = position.x + Math.cos(angle) * stepSize;
+      position.y = position.y + Math.sin(angle) * stepSize;
+
+      }
+  }
+}
+
+function distance( pt, pt2 ){
+
+  var xs = 0;
+  var ys = 0;
+
+  xs = pt2.x - pt.x;
+  xs = xs * xs;
+
+  ys = pt2.y - pt.y;
+  ys = ys * ys;
+
+  return Math.sqrt( xs + ys );
+}
+
+function mouseDown( event ){
+  mouse.down = true;
+  position.x = event.pageX;
+  position.y = event.pageY;
+
+  document.getElementById('info').style.display = 'none';
+}
+
+function mouseUp( event ){
+    mouse.down = false;
+}
+
+function doubleClick( event ) {
+  canvas.width = canvas.width;
+}
+
+function textWidth( string, size ) {
+  context.font = size + "px Georgia";
+
+  if ( context.fillText ) {
+    return context.measureText( string ).width;
+  } else if ( context.mozDrawText) {
+    return context.mozMeasureText( string );
+  }
+
+ };
+
+init();
+</script>
+</head>
+<body>
+<header>
+<h1>Click and drag to draw</h1>
+</header>
+
+<main>
+<canvas id='canvas'></canvas>
+<span id='info'>Click and drag to draw!<span>
+</main>
+
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
