@@ -7,13 +7,18 @@
 h1, footer {
     text-align: center;
 }
+canvas {
+    border: 1px solid #555;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    margin-top: 30px;
+}
 footer>a, footer>a:visited {
     text-decoration: none;
     color: #555;
-}
-Canvas {
-  border: 1px solid black;
-</style>
 }
 </style>
 <script>
@@ -37,7 +42,12 @@ window.onload = init;
 </script>
 </head>
 <body>
-  <canvas id="Look What I Drew" width="600" height="200" id="tshirtCanvas"></canvas>
+  <main>
+    <canvas id="myCanvas" width="600" height="200">
+    Sorry, your old browser doesn't support the canvas element. Time for a new
+    browser!
+    </canvas>
+    </main>
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
