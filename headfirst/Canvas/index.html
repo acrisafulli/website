@@ -26,14 +26,19 @@ function init() {
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
 window.onload = init;
+
+window.onload = function() {
+  var canvas = document.getElementById("tshirtCanvas");
+  var context = canvas.getContext("2d");
+  context.fillRect(10, 10, 100, 100);
+};
 </script>
 </head>
 <body>
-  <canvas id="lookwhatIdrew" width="600" height="200"></canvas>
+  <canvas id="lookwhatIdrew" width="600" height="200" id="tshirtCanvas"></canvas>
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
 <a id="vLink2"><strong> CSS </strong> Valid! </a>
 </footer>
 </body>
 </html>
-
