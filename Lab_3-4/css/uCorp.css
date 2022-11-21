@@ -30,7 +30,10 @@ h2 {
   margin-top: 5px; 
   margin-bottom: 0px; 
 }
-
+img{
+  width: 200px;
+  height:auto;
+}
 header {
   border-bottom-style: solid;
   border-bottom-width: 5px;
