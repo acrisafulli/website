@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
 <title>My First JavaScript</title>
+<style>
+	h1 {
+		text-align: center;
+	}
+	body {
+		background-color:aliceblue
+	}
+	.floatright {
+  float: right;
+  clear: right;
+  margin: 10px;
+}
+</style>
 <meta charset="utf-8">
 </head>
 <body>
+	<h1>99 Duck</h1>
+	<img class="floatright" src="https://iconarchive.com/download/i107380/google/noto-emoji-animals-nature/22276-duck.ico" height="200" alt="Duck"/>
 <script>
 // substitute your favorite drink below
-var drink = "Energy Drink";
+var drink = "Duck";
 var lyrics = "";
 var cans = 99;
 while (cans > 0) {
-	lyrics = lyrics + cans + " cans of " + drink + " on the wall <br>";
-	lyrics = lyrics + cans + " cans of " + drink + "<br>";
-	lyrics = lyrics + "Take one down, pass it around, <br>";
+	lyrics = lyrics + cans + " types of " + drink + " in the pond <br>";
+	lyrics = lyrics + cans + " types of " + drink + "<br>";
+	lyrics = lyrics + "close your eyes, the next day arrives, <br>";
 	if (cans > 1) {
-		lyrics = lyrics + (cans-1) + " cans of " + drink + " on the wall <br>";
+		lyrics = lyrics + (cans-1) + " types of " + drink + " in the pond <br>";
 	}
 	else {
-		lyrics = lyrics + "No more cans of " + drink + " on the wall <br>";
+		lyrics = lyrics + "No more types of " + drink + " in the pond <br>";
 	}
 	cans = cans - 1;
 }
