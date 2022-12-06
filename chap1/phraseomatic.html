@@ -6,14 +6,23 @@
 <style>
 body {
 	font-family: Verdana, Helvetica, sans-serif;
+	background-color:rgb(200, 251, 196)
+}
+.floatright {
+  float: right;
+  clear: right;
+  margin: 10px;
+}
+h1,p {
+text-align: center;
 }
 </style>
 <script>
 
 function makePhrases() {
-	var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
-	var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
-	var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+	var words1 = ["Disheveled", "Aloof", "Vibrant", "Classy", "Elegant"];
+	var words2 = ["Red Panda", "Fennec Fox", "Pangolin", "Flying Squirrel", "Hummingbird"];
+	var words3 = ["lover", "owner", "friend", "trainer", "whisperer"];
 
 	var rand1 = Math.floor(Math.random() * words1.length);
 	var rand2 = Math.floor(Math.random() * words2.length);
@@ -31,6 +40,7 @@ window.onload = makePhrases;
 
 <p id="phrase"></p>
 
+<img class="floatright" src="https://images.vexels.com/media/users/3/253843/isolated/lists/9ca76003d5f08f1bc0dbb5103df70815-bubblegum-machine-color-stroke.png" height="300" alt="machine"/>
 </body>
 </html>
 
