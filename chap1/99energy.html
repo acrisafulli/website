@@ -24,7 +24,6 @@ footer {
 	<h1>99 Duck</h1>
 	<img class="floatright" src="https://iconarchive.com/download/i107380/google/noto-emoji-animals-nature/22276-duck.ico" height="200" alt="Duck">
 <script>
-// substitute your favorite drink below
 var drink = "Duck";
 var lyrics = "";
 var cans = 99;
@@ -40,6 +39,8 @@ while (cans > 0) {
 	}
 	cans = cans - 1;
 }
+document.write(lyrics);
+
 function init() {
   var loc = window.location.href;
   var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
@@ -48,7 +49,6 @@ function init() {
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
-document.write(lyrics);
 window.onload = init;
 </script>
 <footer>
