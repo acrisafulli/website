@@ -16,9 +16,11 @@ body {
 h1,p {
 text-align: center;
 }
+footer {
+	text-align: center;
+}
 </style>
 <script>
-
 function makePhrases() {
 	var words1 = ["Disheveled", "Aloof", "Vibrant", "Classy", "Elegant"];
 	var words2 = ["Red Panda", "Fennec Fox", "Pangolin", "Flying Squirrel", "Hummingbird"];
@@ -33,6 +35,15 @@ function makePhrases() {
 	phraseElement.innerHTML = phrase;
 }
 window.onload = makePhrases;
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+window.onload = init;
 </script>
 </head>
 <body>
@@ -41,6 +52,10 @@ window.onload = makePhrases;
 <p id="phrase"></p>
 
 <img class="floatright" src="https://images.vexels.com/media/users/3/253843/isolated/lists/9ca76003d5f08f1bc0dbb5103df70815-bubblegum-machine-color-stroke.png" height="300" alt="machine">
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
 </body>
 </html>
 
