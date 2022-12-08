@@ -40,7 +40,6 @@ while (cans > 0) {
 	}
 	cans = cans - 1;
 }
-document.write(lyrics);
 function init() {
   var loc = window.location.href;
   var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
@@ -49,6 +48,7 @@ function init() {
   document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
   document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 }
+document.write(lyrics);
 window.onload = init;
 </script>
 <footer>
