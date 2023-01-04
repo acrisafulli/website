@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Title</title>
+<script src="playlist.js"></script>
+<link rel="stylesheet" href="playlist.css">
+<title>Webville Tunes</title>
 <style>
 h1, footer {
     text-align: center;
@@ -25,7 +27,13 @@ window.onload = init;
 </script>
 </head>
 <body>
-<h1>Title</h1>
+<form>
+   <input type="text" id="songTextInput" size="40" placeholder="Song name">
+   <input type="button" id="addButton" value="add Song">
+</form>
+
+<ul id="playlist">
+</ul>
 
 <footer>
 <a id="vLink1"><strong> HTML </strong> Valid! </a> |
