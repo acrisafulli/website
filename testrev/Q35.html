@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Question 35</title>
+<style>
+h1, footer {
+    text-align: center;
+    color: rgb(150, 180, 223);
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+h2, h3 {
+  color: rgb(199, 125, 197);
+  text-align: center;
+}
+legend {
+    background-color: rgb(174, 223, 187);
+    color: rgb(5, 5, 5);
+    padding: 1% 2%;
+}
+fieldset {
+  background: linear-gradient(148deg, rgb(183, 201, 227) 0%, rgb(223, 174, 232) 45%, rgb(210, 255, 203) 100%);
+
+  max-width: 80%;
+  margin: 8%;
+}
+
+input {
+    margin: 0.4rem;
+}
+body {
+  background-color: rgb(233, 227, 212);
+}
+</style>
+<script>
+function init() {
+  var loc = window.location.href;
+  var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+  var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                        loc + '?profile=css3';
+  document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+  document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<h1>Question 35 C</h1>
+<h2> Which element is used to group related form fields on a Webpage by creating a box around the related fields, to group and separate them? </h2>
+<h3>A. legend.</h3>
+ <h3> B. datalist. </h3>
+ <h3> C. radio.</h3>
+ <h3 style="color:rgb(150, 198, 150)"> D. fieldset.</h3>
+ <form>
+  <fieldset>
+    <legend>Choose your favorite Insect</legend>
+
+    <input type="radio" id="Dragonfly" name="Insect" value="D">
+    <label for="Dragonfly">Dragonfly</label><br>
+
+    <input type="radio" id="Butterfly" name="Insect" value="B">
+    <label for="Butterfly">Butterfly</label><br>
+
+    <input type="radio" id="Ladybug" name="Insect" value="L" />
+    <label for="Ladybug">Ladybug</label>
+  </fieldset>
+</form>
+<h3>Fieldset is used to group related elements in a form and the tag draws a box around the related elements.</h3>
+<h3>A radio button is used to select one of the given options.</h3>
+<h3>Legend is used to add a caption to a fieldset.</h3>
+<h3>Datalist specify a list of pre-defined options and provide autocomplete feature for an input element.</h3>
+
+
+<label for="flower">Choose your flower from the list:</label>
+<input list="flowers" name="flower" id="flower">
+
+<datalist id="flowers">
+  <option value="Carnations">
+  <option value="Anemones">
+  <option value="Hibiscus">
+  <option value="Lotus">
+  <option value="Iris">
+</datalist>
+<footer>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+</body>
+</html>
+
